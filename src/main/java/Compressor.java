@@ -1,6 +1,4 @@
-import java.io.File;
 import java.io.IOException;
-import java.nio.Buffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -10,6 +8,7 @@ public class Compressor {
         String fileName = System.getProperty("filePath");
         Compressor compressor  = new Compressor();
         byte[] fileContent = compressor.readFile(fileName);
+        System.out.println("Length of file: " + fileContent.length);
         System.out.println(Arrays.toString(fileContent));
     }
 
